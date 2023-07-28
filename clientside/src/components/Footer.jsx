@@ -9,7 +9,7 @@ const Footer = () => {
       <div className='flex items-center sm:text-xs'>
       Build With <span className='text-pink-600 text-2xl px-1 md:text-green-500 lg:text-blue-600'>&#9825;</span> by &nbsp;<Link to={'/'} className='underline underline-offset-2'> balajiaadi2000@gmail.com</Link>
       </div>
-      <Link to={'/'} target={"_blank"} className='underline'>Bolo Namasta</Link>
+      <Link to={'/'} target={"_blank"} className='underline'>Bolo Namaste</Link>
       </div>
     </footer>
   )
