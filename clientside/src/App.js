@@ -10,7 +10,7 @@ import AboutPage from './components/AboutPage'
 import Footer from './components/Footer'
 import ProjectsPage from './components/ProjectsPage'
 import TransitionEffect from './components/TransitionEffect'
-import { AnimatePresence } from 'framer-motion'
+// import { AnimatePresence } from 'framer-motion'
 
 
 

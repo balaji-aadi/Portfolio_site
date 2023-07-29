@@ -28,7 +28,7 @@ const HomePage = () => {
 
             <div className='flex items-center py-4 gap-3 lg:mx-40 md:mx-0'>
 
-              <Link to={'/CV_Resume.pdf'} target={"_blank"} className='flex items-center bg-black text-white p-2.5 px-6 
+              <Link to={'/Resume.pdf'} target={"_blank"} className='flex items-center bg-black text-white p-2.5 px-6 
           rounded-lg text-lg font-semibold hover:bg-white hover:text-black border 
           border-solid border-transparent hover:border-black' download={true}>Resume <AiOutlineCloudDownload className='w-6 ml-1' /></Link>
 
