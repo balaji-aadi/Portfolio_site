@@ -112,9 +112,9 @@ const AboutPage = () => {
           </div>
 
           <div className="flex flex-col items-end justify-center ">
-            <span className="inline-block text-7xl font-bold">0.7</span>
+            <span className="inline-block text-7xl font-bold">1</span>
             <h2 className="text-xl font-medium capitalize text-black/75">
-              Years of Experience
+              Year of Experience
             </h2>
           </div>
         </div>
@@ -160,7 +160,7 @@ const AboutPage = () => {
         Experience
       </h1>
       <Experience />
-      <h1 className="font-bold text-8xl mt-52 w-full text-center md:text-6xl md:mt-32 sm:text-4xl">
+      <h1 className="font-bold text-8xl mt-5 w-full text-center md:text-6xl md:mt-32 sm:text-4xl">
         Education
       </h1>
       <Education />

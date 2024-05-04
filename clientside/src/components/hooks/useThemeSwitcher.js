@@ -1,53 +1,39 @@
-import React, { useEffect, useState } from 'react'
+import { createContext, useContext, useEffect, useState } from "react";
+import PropTypes from "prop-types";
 
-const useThemeSwitcher = () => {
+const ThemeContext = createContext();
 
-    const preferDarkQuery = "(prefer-color-scheme : dark)";
-    const [mode, setMode] = useState("");
+export const useTheme = () => {
+  return useContext(ThemeContext);
+};
 
-    useEffect(() => {
+export const ThemeProvider = ({ children }) => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
+  const toggleTheme = () => {
+    setIsDarkMode((prevState) => !prevState);
+  };
 
-        const mediaQuery = window.matchMedia(preferDarkQuery);
-        const userPref = window.localStorage.getItem("theme");
+  const handleLoading = (data) => {
+    setIsLoading(data);
+  };
 
-        const handleChange = () => {
-            if(userPref) {
-                let check = userPref === "dark" ? "dark" : "light";
-                setMode(check);
-                if(check === 'dark'){
-                    document.documentElement.classList.add("dark")
-                }
-                else{
-                    document.documentElement.classList.remove("dark")
-                }
-            }
-            else{
-                let check = mediaQuery.matches ? "dark" : "light"
-                setMode(check);
+  const theme = isDarkMode ? "Dark" : "light";
 
-                if(check === 'dark'){
-                    document.documentElement.classList.add("dark")
-                }
-                else{
-                    document.documentElement.classList.remove("dark")
-                }
-            }
-        }
-
-        mediaQuery.addEventListener("change" , handleChange)
-
-        return () => mediaQuery.removeEventListener("change", handleChange);
-
-
-    },[])
-
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [isDarkMode]);
 
   return (
-    <div>
-      useThemeSwitcher
-    </div>
-  )
-}
+    <ThemeContext.Provider
+      value={{ theme, toggleTheme, isLoading, handleLoading }}
+    >
+      {children}
+    </ThemeContext.Provider>
+  );
+};
 
-export default useThemeSwitcher
+ThemeProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};

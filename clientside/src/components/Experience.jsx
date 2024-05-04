@@ -29,9 +29,10 @@ const Details = ({
             @{company}
           </Link>
         </h3>
-        <span className="capitalize font-medium text-black/75 sm:text-sm">
+        <span className="capitalize font-bold text-black/75 sm:text-sm ">
           {time} | {address}
         </span>
+
         <p className="w-full text-black font-medium sm:text-sm">{work1}</p>
         <br />
         <p className="w-full text-black font-medium sm:text-sm">{work2}</p>
@@ -65,21 +66,6 @@ const Experience = () => {
 
         <ul className="w-full flex flex-col items-start justify-between ml-4">
           <Details
-            position="Intern"
-            company="Dave’s Brother Technology"
-            companyLink="/Experience_Letter.pdf"
-            time=" 23/01/23 to 27/04/23"
-            address="3 floor, JIC, Udhyog Bhawan,
-          beside Katanga TV Tower, Jabalpur,
-          Madhya Pradesh 482002"
-            work1="Working on their core application using frontend technologies involving the React and Redux toolkit"
-            work2="Worked on a team responsible for developing a website dashboard feature that allowed users to create, update and delete items including designing and implementing a new user interface and developing the backend infrastructure to support the feature"
-            work3="Tech stacks: ReactJs, NodeJs, ExpressJs, MongoDB"
-          />
-        </ul>
-
-        <ul className="w-full flex flex-col items-start justify-between ml-4">
-          <Details
             position="Associate Full Stack Software Engineer | Full Time"
             company="Nable Invent Solutions Pvt.Ltd"
             companyLink="/Experience_Letter.pdf"
@@ -91,6 +77,21 @@ const Experience = () => {
             work4="Integrated state management with Redux Persist and Redux Toolkit, ensuring data integrity and application stability"
             work5="Designed and implemented user authentication systems to safeguard sensitive information"
             work6="Developed a dynamic dashboard featuring intuitive drag-and-drop functionality for enhanced user experience"
+          />
+        </ul>
+
+        <ul className="w-full flex flex-col items-start justify-between ml-4">
+          <Details
+            position="Intern"
+            company="Dave’s Brother Technology"
+            companyLink="/Experience_Letter.pdf"
+            time=" 23/01/23 to 27/04/23"
+            address="3 floor, JIC, Udhyog Bhawan,
+          beside Katanga TV Tower, Jabalpur,
+          Madhya Pradesh 482002"
+            work1="Working on their core application using frontend technologies involving the React and Redux toolkit"
+            work2="Worked on a team responsible for developing a website dashboard feature that allowed users to create, update and delete items including designing and implementing a new user interface and developing the backend infrastructure to support the feature"
+            work3="Tech stacks: ReactJs, NodeJs, ExpressJs, MongoDB"
           />
         </ul>
       </div>
