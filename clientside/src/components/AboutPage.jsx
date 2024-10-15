@@ -130,7 +130,7 @@ const AboutPage = () => {
         <h2 className="font-bold text-8xl mt-20 mb-12 w-full text-center md:text-6xl sm:text-4xl">
           Skills I Have
         </h2>
-        <div className="w-full px-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 place-items-center">
+        <div className="w-full px-8 grid grid-cols-5 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10 place-items-center">
           {skillsData}
         </div>
       </div>
