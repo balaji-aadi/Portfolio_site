@@ -107,16 +107,16 @@ const AboutPage = () => {
 
           <div className="flex flex-col items-center justify-center">
             <span className="inline-block text-7xl font-bold md:text-5xl sm:text-5xl xs:text-4xl">
-              50+
+              4
             </span>
             <h2 className="mb-4 text-4xl font-medium capitalize text-dark/75 xl: text-center md:text-lg sm:text-base xs:text-sm">
-              Projects Completed
+              Live Projects Completed
             </h2>
           </div>
 
           <div className="flex flex-col items-center justify-center ">
             <span className="inline-block text-7xl font-bold md:text-5xl sm:text-5xl xs:text-4xl">
-              0.3
+              1.5
             </span>
             <h2 className="mb-4 text-4xl font-medium capitalize text-dark/75 xl: text-center md:text-lg sm:text-base xs:text-sm">
               Years of Experience
