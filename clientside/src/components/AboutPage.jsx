@@ -6,47 +6,20 @@ import TransitionEffect from "./TransitionEffect";
 
 const AboutPage = () => {
   const items = [
-    {
-      id: 1,
-      imgPath: "/js.png",
-    },
-    {
-      id: 2,
-      imgPath: "/html.png",
-    },
-    {
-      id: 3,
-      imgPath: "/redux.png",
-    },
-    {
-      id: 4,
-      imgPath: "/tailwindcss.png",
-    },
-    {
-      id: 5,
-      imgPath: "/reactjs.png",
-    },
-    {
-      id: 6,
-      imgPath: "/nodejs.png",
-    },
-    {
-      id: 7,
-      imgPath: "/mysql.png",
-    },
-    {
-      id: 8,
-      imgPath: "/mongodb.png",
-    },
-    {
-      id: 9,
-      imgPath: "/css.png",
-    },
+    { id: 1, imgPath: "/js.png", name: "JavaScript" },
+    { id: 2, imgPath: "/html.png", name: "HTML" },
+    { id: 3, imgPath: "/redux.png", name: "Redux" },
+    { id: 4, imgPath: "/tailwindcss.png", name: "Tailwind" },
+    { id: 5, imgPath: "/reactjs.png", name: "React" },
+    { id: 6, imgPath: "/nodejs.png", name: "Node.js" },
+    { id: 7, imgPath: "/mysql.png", name: "MySQL" },
+    { id: 8, imgPath: "/mongodb.png", name: "MongoDB" },
+    { id: 9, imgPath: "/css.png", name: "CSS" },
   ];
 
-  const skillsData = items.map((data) => {
-    return <Skills id={data.id} path={data.imgPath} />;
-  });
+  const skillsData = items.map((data) => (
+    <Skills key={data.id} id={data.id} path={data.imgPath} name={data.name} />
+  ));
 
   return (
     <main className="flex w-full flex-col items-center justify-center">
@@ -68,9 +41,9 @@ const AboutPage = () => {
           </h2>
           <p className="text-medium ">
             Hi, I'm Balaji Aadesh, a web developer passionate about creating
-            beautiful, functional, and user-centered digital experiences. As a
-            fresher, I always seek new and innovative ways to bring my clients'
-            visions to life.
+            beautiful, functional, and user-centered digital experiences. With
+            one year of experience, I continuously seek innovative ways to bring
+            my clients' visions to life.
           </p>
           <p className="text-medium my-4">
             Adaptable back-end developer with a strong track record of creating
@@ -105,14 +78,14 @@ const AboutPage = () => {
           </div>
 
           <div className="flex flex-col items-end justify-center">
-            <span className="inline-block text-7xl font-bold">50+</span>
+            <span className="inline-block text-7xl font-bold">4</span>
             <h2 className="text-xl font-medium capitalize text-black/75">
-              Projects Completed
+              Live Projects Completed
             </h2>
           </div>
 
           <div className="flex flex-col items-end justify-center ">
-            <span className="inline-block text-7xl font-bold">1</span>
+            <span className="inline-block text-7xl font-bold">1.5</span>
             <h2 className="text-xl font-medium capitalize text-black/75">
               Year of Experience
             </h2>
@@ -152,10 +125,15 @@ const AboutPage = () => {
         </div>
       </div>
 
-      <h2 className="font-bold text-8xl mt-52 w-full text-center md:text-6xl md:mt-32 sm:text-4xl">
-        Skills I Have
-      </h2>
-      <div className="flex w-full">{skillsData}</div>
+      <div className="w-full flex flex-col items-center">
+        {/* Skills Section */}
+        <h2 className="font-bold text-8xl mt-20 mb-12 w-full text-center md:text-6xl sm:text-4xl">
+          Skills I Have
+        </h2>
+        <div className="w-full px-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 place-items-center">
+          {skillsData}
+        </div>
+      </div>
       <h1 className="font-bold text-8xl mt-52 w-full text-center md:text-6xl md:mt-32 sm:text-4xl ">
         Experience
       </h1>

@@ -15,7 +15,7 @@ const HomePage = () => {
             <img src="/bg.png" alt="loading..." />
           </div>
 
-          <div className="w-[70rem] mt-10 px-10 text-black md:mt-0 md:w-auto lg:mt-[40rem]">
+          <div className="w-full mt-10 px-10 text-black md:mt-0 md:w-auto lg:mt-[40rem]">
             <h1 className="text-6xl font-bold w-18 py-4 md:text-2xl">
               Turning Vision Into Reality With Code And Design.
             </h1>
@@ -27,7 +27,7 @@ const HomePage = () => {
 
             <div className="flex items-center py-4 gap-3 lg:mx-40 md:mx-0">
               <Link
-                to={"/new_resume_2024.pdf"}
+                to={"/resume.pdf"}
                 target={"_blank"}
                 className="flex items-center bg-black text-white p-2.5 px-6 
           rounded-lg text-lg font-semibold hover:bg-white hover:text-black border 

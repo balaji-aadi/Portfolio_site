@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { AiFillGithub } from "react-icons/ai";
+import { MdArrowOutward } from "react-icons/md";
 
 const ProjectLayout = ({
   id,
@@ -10,6 +11,8 @@ const ProjectLayout = ({
   minorTitle1,
   minorImg1,
   minorTitle2,
+  LoginDetails,
+  LoginDetails2,
   minorImg2,
   gitLinkMajor,
   gitLinkMinor1,
@@ -47,11 +50,15 @@ const ProjectLayout = ({
               <AiFillGithub size={40} />
             </Link>
             <Link to={majorProjectLiveLink2} target="_blank">
-              <button className="border border-none bg-black text-white w-32 h-10 rounded-lg cursor-pointer ">
-                Visit Project
+              <button className=" flex items-center justify-center gap-3 border border-none bg-black text-white w-32 h-10 rounded-lg cursor-pointer ">
+                Live{" "}
+                <i>
+                  <MdArrowOutward />
+                </i>
               </button>{" "}
             </Link>
           </div>
+          <p className="text-sm text-purple-600 font-bold">{LoginDetails}</p>
         </div>
       </div>
 
@@ -89,6 +96,7 @@ const ProjectLayout = ({
               </span>
             </Link>
           </div>
+          <p className="text-sm text-purple-600 font-bold">{LoginDetails2}</p>
         </div>
         <div
           className="flex items-center justify-center w-[38%] h-auto  border border-solid

@@ -18,13 +18,13 @@ const Details = ({
   return (
     <li className="my-10 first:mt-1 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[100%] ">
       <div>
-        <h3 className="capitalize font-bold text-2xl sm:font-semibold">
+        <h3 className="capitalize font-bold text-2xl sm:font-semibold mb-4">
           {position}&nbsp;{" "}
           <Link
             to={companyLink}
             target="_blank"
             download={true}
-            className="text-pink-600 capitalize sm:text-lg"
+            className="text-purple-600 capitalize sm:text-lg"
           >
             @{company}
           </Link>
@@ -33,7 +33,7 @@ const Details = ({
           {time} | {address}
         </span>
 
-        <p className="w-full text-black font-medium sm:text-sm">{work1}</p>
+        <p className="w-full text-black font-medium sm:text-sm mt-4">{work1}</p>
         <br />
         <p className="w-full text-black font-medium sm:text-sm">{work2}</p>
         <br />
@@ -66,17 +66,14 @@ const Experience = () => {
 
         <ul className="w-full flex flex-col items-start justify-between ml-4">
           <Details
-            position="Associate Full Stack Software Engineer | Full Time"
+            position="Associate Software Developer | Full Time"
             company="Nable Invent Solutions Pvt.Ltd"
             companyLink="/Experience_Letter.pdf"
             time=" 03/10/23 to present"
-            address="Vyapar Vihar Main Road Top Floor, Karan Chamber Bilaspur, Chhattisgarh, India ,beside Katanga TV Tower, Jabalpur, Madhya Pradesh 482002"
-            work1="As a FullStack Developer, I spearheaded pivotal projects, including a comprehensive Business Management Website and an innovative Employee Self-Service platform."
-            work2="Implemented robust frontend solutions utilizing REST APIs, ensuring seamless integration with backend systems"
-            work3="Engineered a meticulously structured UI employing advanced optimization techniques like useMemo and code splitting to enhance performance"
-            work4="Integrated state management with Redux Persist and Redux Toolkit, ensuring data integrity and application stability"
-            work5="Designed and implemented user authentication systems to safeguard sensitive information"
-            work6="Developed a dynamic dashboard featuring intuitive drag-and-drop functionality for enhanced user experience"
+            address="Vyapar Vihar Main Road Top Floor, Karan Chamber Bilaspur, Chhattisgarh, 482002"
+            work1="As a Full Stack Developer with 1.5 years of experience, I have successfully led four impactful projects currently live, including a Business Management Website and an Employee Self-Service platform. My expertise spans both frontend and backend development, where I’ve crafted seamless REST API integrations and optimized user interfaces using techniques like code splitting and useMemo for enhanced performance."
+            work2="I’ve implemented robust state management with Redux Persist and Redux Toolkit, ensuring data integrity and application stability.My work is a testament to my commitment to delivering innovative solutions that drive efficiency and user satisfaction"
+            work3="Tech stacks: HTML, CSS, Tailwind, Javascript, ReactJs, Redux toolkit, NodeJs, ExpressJs, MongoDB, Django, postgres"
           />
         </ul>
 
